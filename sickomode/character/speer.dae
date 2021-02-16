@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2019-06-18T15:32:48Z</created>
+	<modified>2019-06-18T15:32:48Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_geometries>
+	<geometry id="id-mesh-2" name="Cylinder">
+		<mesh>
+			<source id="id-mesh-2-positions">
+				<float_array id="id-mesh-2-positions-array" count="90"> 1.192092824453539e-08 -2.9802322387695312e-08 0.4999999701976776 1.192092824453539e-08 -1.0 0.4999999403953552 0.4755282402038574 -1.0 0.15450844168663025 0.4755282402038574 0.0 0.15450844168663025 0.4755282402038574 0.0 0.15450844168663025 0.4755282402038574 -1.0 0.15450844168663025 0.2938925623893738 -1.0 -0.4045086205005646 0.2938925623893738 0.0 -0.4045085310935974 0.2938925623893738 0.0 -0.4045085310935974 0.2938925623893738 -1.0 -0.4045086205005646 -0.29389265179634094 -1.0 -0.404508501291275 -0.29389265179634094 0.0 -0.40450847148895264 0.4755282402038574 -1.0 0.15450844168663025 1.192092824453539e-08 -1.0 0.4999999403953552 -0.47552821040153503 -1.0 0.15450850129127502 -0.29389265179634094 -1.0 -0.404508501291275 0.2938925623893738 -1.0 -0.4045086205005646 -0.29389265179634094 0.0 -0.40450847148895264 -0.29389265179634094 -1.0 -0.404508501291275 -0.47552821040153503 -1.0 0.15450850129127502 -0.47552821040153503 0.0 0.1545085608959198 -0.47552821040153503 0.0 0.1545085608959198 -0.47552821040153503 -1.0 0.15450850129127502 1.192092824453539e-08 -1.0 0.4999999403953552 1.192092824453539e-08 -2.9802322387695312e-08 0.4999999701976776 1.192092824453539e-08 -2.9802322387695312e-08 0.4999999701976776 0.4755282402038574 0.0 0.15450844168663025 0.2938925623893738 0.0 -0.4045085310935974 -0.29389265179634094 0.0 -0.40450847148895264 -0.47552821040153503 0.0 0.1545085608959198</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-positions-array" count="30" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-2-normals">
+				<float_array id="id-mesh-2-normals-array" count="90"> 0.5877852439880371 -1.2675685390206581e-08 0.80901700258255 0.5877852439880371 -1.2675685390206581e-08 0.80901700258255 0.5877852439880371 -1.2675685390206581e-08 0.80901700258255 0.5877852439880371 -1.2675685390206581e-08 0.80901700258255 0.9510564804077148 3.135063053605336e-08 -0.30901703238487244 0.9510564804077148 3.135063053605336e-08 -0.30901703238487244 0.9510564804077148 3.135063053605336e-08 -0.30901703238487244 0.9510564804077148 3.135063053605336e-08 -0.30901703238487244 -2.028109662433053e-07 5.960464477539063e-08 -1.0 -2.028109662433053e-07 5.960464477539063e-08 -1.0 -2.028109662433053e-07 5.960464477539063e-08 -1.0 -2.028109662433053e-07 5.960464477539063e-08 -1.0 0.0 -1.0 1.0027525831901585e-07 0.0 -1.0 1.0027525831901585e-07 0.0 -1.0 1.0027525831901585e-07 0.0 -1.0 1.0027525831901585e-07 0.0 -1.0 1.0027525831901585e-07 -0.9510565996170044 -2.783294483776899e-08 -0.3090168833732605 -0.9510565996170044 -2.783294483776899e-08 -0.3090168833732605 -0.9510565996170044 -2.783294483776899e-08 -0.3090168833732605 -0.9510565996170044 -2.783294483776899e-08 -0.3090168833732605 -0.5877851843833923 -3.802706061151184e-08 0.8090170621871948 -0.5877851843833923 -3.802706061151184e-08 0.8090170621871948 -0.5877851843833923 -3.802706061151184e-08 0.8090170621871948 -0.5877851843833923 -3.802706061151184e-08 0.8090170621871948 2.9884355759327366e-15 1.0 2.3841858265427618e-08 2.9884355759327366e-15 1.0 2.3841858265427618e-08 2.9884355759327366e-15 1.0 2.3841858265427618e-08 2.9884355759327366e-15 1.0 2.3841858265427618e-08 2.9884355759327366e-15 1.0 2.3841858265427618e-08</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-normals-array" count="30" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-2-vertices">
+				<input semantic="POSITION" source="#id-mesh-2-positions"/>
+			</vertices>
+			<polygons count="7">
+				<input semantic="VERTEX" source="#id-mesh-2-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-2-normals" offset="0"/>
+				<p> 0 1 2 3 </p>
+				<p> 4 5 6 7 </p>
+				<p> 8 9 10 11 </p>
+				<p> 12 13 14 15 16 </p>
+				<p> 17 18 19 20 </p>
+				<p> 21 22 23 24 </p>
+				<p> 25 26 27 28 29 </p>
+			</polygons>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="laser_beam" name="laser_beam" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 -2.3841858265427618e-08 0.0 1.0 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-2">
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<library_animations>
+	<animation id="id-anim-3">
+		<source id="id-anim-3-input">
+			<float_array id="id-anim-3-input-array" count="6"> 0.0 0.041666666666666664 0.08333333333333333 0.125 0.16666666666666666 0.20833333333333331</float_array>
+			<technique_common>
+				<accessor source="#id-anim-3-input-array" count="6" stride="1">
+					<param name="TIME" type="float"/>
+				</accessor>
+			</technique_common>
+		</source>
+		<source id="id-anim-3-transform-output">
+			<float_array id="id-anim-3-transform-output-array" count="96">  1.0 0.0 0.0 -2.3841858265427618e-08 0.0 1.0 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0    1.0 0.0 0.0 -2.3841858265427618e-08 0.0 45.35555648803711 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0    1.0 0.0 0.0 -2.3841858265427618e-08 0.0 170.29151916503906 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0    1.0 0.0 0.0 -2.3841858265427618e-08 0.0 330.70843505859375 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0    1.0 0.0 0.0 -2.3841858265427618e-08 0.0 455.64447021484375 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0    1.0 0.0 0.0 -2.3841858265427618e-08 0.0 500.0 0.0 1.0 0.0 0.0 1.0 4.7683716530855236e-08 0.0 0.0 0.0 1.0  </float_array>
+			<technique_common>
+				<accessor source="#id-anim-3-transform-output-array" count="6" stride="16">
+					<param name="TRANSFORM" type="float4x4"/>
+				</accessor>
+			</technique_common>
+		</source>
+		<source id="id-anim-3-interpolation-output">
+			<Name_array id="id-anim-3-interpolation-output-array" count="6"> LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+			<technique_common>
+				<accessor source="#id-anim-3-interpolation-output-array" count="6" stride="1">
+					<param name="INTERPOLATION" type="Name"/>
+				</accessor>
+			</technique_common>
+		</source>
+		<sampler id="id-anim-3-sampler">
+			<input semantic="INPUT" source="#id-anim-3-input"/>
+			<input semantic="OUTPUT" source="#id-anim-3-transform-output"/>
+			<input semantic="INTERPOLATION" source="#id-anim-3-interpolation-output"/>
+		</sampler>
+		<channel source="#id-anim-3-sampler" target="laser_beam/transform"/>
+	</animation>
+</library_animations>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

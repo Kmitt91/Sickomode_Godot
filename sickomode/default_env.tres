@@ -1,0 +1,19 @@
+[gd_resource type="Environment" load_steps=2 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+sky_top_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+sky_horizon_color = Color( 1, 1, 1, 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_sky_orientation = Basis( -0.547358, 0, -0.836899, 0, 1, 0, 0.836899, 0, -0.547358 )
+ambient_light_energy = 0.25
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 3.0
+glow_strength = 1.15
+glow_bloom = 0.01
+glow_blend_mode = 1
+adjustment_enabled = true
+adjustment_saturation = 1.25

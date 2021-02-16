@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/buff.gd" type="Script" id=2]
+[ext_resource path="res://scripts/MeshInstance2.gd" type="Script" id=4]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0.01, 0 ), 0.0, 3.29524, 0, 0, Vector2( 1, 1 ), -1.38939, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+angle = 360.0
+angle_random = 1.0
+scale = 3.0
+scale_random = 0.1
+scale_curve = SubResource( 3 )
+
+[sub_resource type="QuadMesh" id=5]
+
+[sub_resource type="Animation" id=6]
+resource_name = "buff"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material_override:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.870588, 0.0862745, 0.435294, 1 ), Color( 0.870588, 0.0862745, 0.435294, 1 ), Color( 0.870588, 0.0862745, 0.435294, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MeshInstance:material/0:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="QuadMesh" id=7]
+
+[node name="Particles" type="Particles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
+cast_shadow = 0
+lifetime = 1.2
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 5 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "buff"
+anims/buff = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, 1, 0, -5, -4.37114e-08, 0, -5.5, 0 )
+mesh = SubResource( 7 )
+material/0 = null
+script = ExtResource( 4 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

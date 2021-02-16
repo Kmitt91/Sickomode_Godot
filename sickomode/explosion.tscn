@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/explosion.gd" type="Script" id=2]
+[ext_resource path="res://scripts/MeshInstance.gd" type="Script" id=4]
+[ext_resource path="res://scripts/MeshInstance2.gd" type="Script" id=6]
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 2.0
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 4.0
+angular_velocity = 1.0
+angle = 360.0
+angle_random = 1.0
+scale = 2.0
+
+[sub_resource type="QuadMesh" id=3]
+
+[sub_resource type="Animation" id=4]
+resource_name = "explosion"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.2, 0.2, 0.2 ), Vector3( 0.2, 0.2, 0.2 ), Vector3( 1.5, 1.5, 1.5 ), Vector3( 3, 3, 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:material_override:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.27451, 0.0392157, 0.313726, 1 ), Color( 0.27451, 0.0392157, 0.313726, 1 ), Color( 0.27451, 0.0392157, 0.313726, 1 ), Color( 0.27451, 0.0392157, 0.313726, 0 ) ]
+}
+
+[sub_resource type="QuadMesh" id=5]
+
+[node name="explosion" type="Particles"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -20 )
+amount = 35
+randomness = 0.5
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 3 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/explosion = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="magic_circle" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="magic_circle"]
+transform = Transform( 55, 0, 0, 0, -2.40413e-06, 1, 0, -55, -4.37114e-08, 0, -6.66015, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+script = ExtResource( 4 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="magic_circle"]
+transform = Transform( 65, 0, 0, 0, -2.84124e-06, 1, 0, -65, -4.37114e-08, 0, -8.1148, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+script = ExtResource( 6 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
