@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/TexturesCom_Metal_BronzeStatue_1K_normal.png-64f6a13832ba47c408e9000b9c55cff8.s3tc.stex"
+path.etc2="res://.import/TexturesCom_Metal_BronzeStatue_1K_normal.png-64f6a13832ba47c408e9000b9c55cff8.etc2.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://mat/tex/TexturesCom_Metal_BronzeStatue_1K_normal.png"
+dest_files=[ "res://.import/TexturesCom_Metal_BronzeStatue_1K_normal.png-64f6a13832ba47c408e9000b9c55cff8.s3tc.stex", "res://.import/TexturesCom_Metal_BronzeStatue_1K_normal.png-64f6a13832ba47c408e9000b9c55cff8.etc2.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=1
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
