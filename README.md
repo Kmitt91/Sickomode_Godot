@@ -7,7 +7,7 @@ I very new to GitHub therefore I may have missed some things
 
 MIT License
 
-Copyright (c) 2021 Nikita Kmitta
+Copyright (c) 2021 Kmitt91
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
